@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -46,7 +47,13 @@ namespace archive_creator
             
         }
 
-       
+        private void SearchDirSourcePath_Click(object sender, RoutedEventArgs e)
+        {
+            FolderBrowserDialog SearchDirSourceFolderBrowser = new FolderBrowserDialog();
+            SearchDirSourceFolderBrowser.RootFolder = Environment.SpecialFolder.MyComputer;
+            SearchDirSourceFolderBrowser.ShowDialog();
+            ArchivePath.Text = SearchDirSourceFolderBrowser.SelectedPath;
+        }
     }
     
 }
