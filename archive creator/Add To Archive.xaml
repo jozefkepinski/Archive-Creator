@@ -1,0 +1,18 @@
+﻿<Window x:Class="archive_creator.Add_To_Archive"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:archive_creator"
+        mc:Ignorable="d"
+        Title="Add_To_Archive" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="ArchivePath" HorizontalAlignment="Left" Height="25" Margin="97,23,0,0" TextWrapping="Wrap" Text="Source Path" VerticalAlignment="Top" Width="576"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="17,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Text="Source "/><Run Text="Path:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="17,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Text="Destination"/><LineBreak/><Run/><Run Text=" "/><Run Text="Path:"/></TextBlock>
+        <TextBox x:Name="DestinationPath" HorizontalAlignment="Left" Height="25" Margin="97,65,0,0" TextWrapping="Wrap" Text="Destination Path" VerticalAlignment="Top" Width="576"/>
+        <Button x:Name="SearchDirSourcePath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,23,0,0" VerticalAlignment="Top" Width="57"/>
+        <Button x:Name="SearchDirDestinationPath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,65,0,0" VerticalAlignment="Top" Width="57"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+C:\Users\jozef\source\repos\archive creator\archive creator\bin\Debug\archive creator.exe.config
+C:\Users\jozef\source\repos\archive creator\archive creator\bin\Debug\archive creator.exe
+C:\Users\jozef\source\repos\archive creator\archive creator\bin\Debug\archive creator.pdb
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\MainWindow.g.cs
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\App.g.cs
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator_MarkupCompile.cache
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator_MarkupCompile.lref
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\MainWindow.baml
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator.g.resources
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive_creator.Properties.Resources.resources
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator.csproj.GenerateResource.cache
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator.exe
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator.pdb
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\Add To Archive.g.cs
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\Add To Archive.baml
+C:\Users\jozef\source\repos\archive creator\archive creator\obj\Debug\archive creator.csprojAssemblyReference.cache
