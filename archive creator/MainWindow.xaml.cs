@@ -39,10 +39,7 @@ namespace archive_creator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Thread op = new Thread(() =>
-            //{
-            //    ZipFile.CreateFromDirectory(selectedPath, savedFile);
-            //});
+            
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
             folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
@@ -55,65 +52,14 @@ namespace archive_creator
             {
                 filePath = selectedPath + ".zip";
                 Add_To_Archive add_To_Archive = new Add_To_Archive(selectedPath,filePath);
-                //add_To_Archive.ArchivePath.Text = filePath;
                 add_To_Archive.ShowDialog();
 
                 
 
-
-
-                //SaveFileDialog saveFileDialog = new SaveFileDialog();
-                ////saveFileDialog.FileOk += SaveFileDialog_FileOk;
-                //saveFileDialog.DefaultExt = "zip";
-                //saveFileDialog.Filter = "Archive Creator (*.zip)|*.zip";
-                //saveFileDialog.FileName = "Archive Creator";
-                //saveFileDialog.InitialDirectory = selectedPath;
-                //DialogResult result = saveFileDialog.ShowDialog();
-                //savedFile = saveFileDialog.FileName;
-                    //savedFileInfo = new FileInfo(saveFileDialog.FileName);
-                    //savedFilePath = savedFile;
-                    //saveFileDialog.ShowDialog();
-               
-                //string converted = result.ToString();
-
-                //if (converted == "OK")
-                //{
-                //    op.Start();
-                //    op.Join();
-
-                //    //ZipFile.CreateFromDirectory(selectedPath, savedFilePath);
-                //}
             }
-
-
-
 
         }
 
-        //private void SaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        //{
-        //    //Dispatcher.Invoke(DispatcherPriority.Send, new ZipFileDelegate(Zip), selectedPath, savedFilePath);
-        //    Thread op = new Thread(() =>
-        //    {
-        //        ZipFile.CreateFromDirectory(selectedPath, savedFilePath);
-        //    });
-
-        //    op.Start();
-            
-            
-        //}
-
-        //public void Zip(string input, string output)
-        //{
-        //    DispatcherOperation op = Dispatcher.BeginInvoke((Action)(()=>
-        //   {
-        //       ZipFile.CreateFromDirectory(input, output);
-        //   }));
-
-        //}
-        //public void Zip(string input, string output)
-        //{
-        //    ZipFile.CreateFromDirectory(input, output);
-        //}
+      
     }
 }
