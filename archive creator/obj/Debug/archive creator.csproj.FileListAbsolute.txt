@@ -30,3 +30,7 @@ C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive_cr
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.csproj.GenerateResource.cache
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.exe
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.pdb
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\bin\Debug\DotNetZip.dll
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\bin\Debug\DotNetZip.pdb
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\bin\Debug\DotNetZip.xml
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.csproj.CopyComplete

@@ -13,6 +13,7 @@
         <TextBox x:Name="DestinationPath" HorizontalAlignment="Left" Height="25" Margin="97,65,0,0" TextWrapping="Wrap" Text="Destination Path" VerticalAlignment="Top" Width="576"/>
         <Button x:Name="SearchDirSourcePath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,23,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirSourcePath_Click"/>
         <Button x:Name="SearchDirDestinationPath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,65,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirDestinationPath_Click"/>
+        <Button x:Name="Create_Archive" Content="Create_Archive" HorizontalAlignment="Left" Height="50" Margin="586,286,0,0" VerticalAlignment="Top" Width="178" Click="Create_Archive_Click"/>
 
     </Grid>
 </Window>

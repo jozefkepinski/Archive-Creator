@@ -32,18 +32,17 @@ namespace archive_creator
       
         public MainWindow()
         {
-            
+     
             InitializeComponent();
-           
-
+       
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Thread op = new Thread(() =>
-            {
-                ZipFile.CreateFromDirectory(selectedPath, savedFile);
-            });
+            //Thread op = new Thread(() =>
+            //{
+            //    ZipFile.CreateFromDirectory(selectedPath, savedFile);
+            //});
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
             folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
