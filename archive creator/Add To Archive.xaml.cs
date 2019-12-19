@@ -53,6 +53,15 @@ namespace archive_creator
             SearchDirSourceFolderBrowser.RootFolder = Environment.SpecialFolder.MyComputer;
             SearchDirSourceFolderBrowser.ShowDialog();
             ArchivePath.Text = SearchDirSourceFolderBrowser.SelectedPath;
+            DestinationPath.Text = SearchDirSourceFolderBrowser.SelectedPath + ".zip";
+        }
+
+        private void SearchDirDestinationPath_Click(object sender, RoutedEventArgs e)
+        {
+            //FolderBrowserDialog SearchDirSourceFileBrowser = new FolderBrowserDialog();
+            //SearchDirSourceFileBrowser.RootFolder = Environment.SpecialFolder.MyComputer;
+            //SearchDirSourceFileBrowser.ShowDialog();
+            //DestinationPath.Text = SearchDirSourceFileBrowser.SelectedPath;
         }
     }
     
