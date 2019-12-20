@@ -30,6 +30,7 @@ namespace archive_creator
         public string ArchievePathString;
         public string DestinationArchievePathString;
         FileInfo fileInfo;
+        public string inputDirectory;
         public Add_To_Archive()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace archive_creator
             SearchDirSourceFolderBrowser.RootFolder = Environment.SpecialFolder.MyComputer;
             SearchDirSourceFolderBrowser.ShowDialog();
             ArchivePath.Text = SearchDirSourceFolderBrowser.SelectedPath;
-            //DestinationPath.Text = SearchDirSourceFolderBrowser.SelectedPath + ".zip";
+            
         }
 
         private void SearchDirDestinationPath_Click(object sender, RoutedEventArgs e)
@@ -69,7 +70,7 @@ namespace archive_creator
             fileInfo = new FileInfo(ArchivePath.Text);
             string fileName = fileInfo.Name;
           
-            DestinationPath.Text = FileDirFolderBrowser.SelectedPath + fileName + ".zip";
+            DestinationPath.Text = FileDirFolderBrowser.SelectedPath +"\\"+ fileName + ".zip";
             DestinationArchievePathString = DestinationPath.Text;
         }
 
@@ -79,8 +80,13 @@ namespace archive_creator
             {
                 if (!Ionic.Zip.ZipFile.IsZipFile(DestinationPath.Text))
                 {
-                    System.IO.Compression.ZipFile.CreateFromDirectory(ArchivePath.Text, DestinationPath.Text);
-                    System.Windows.MessageBox.Show("Archive Created!");
+                    inputDirectory = ArchivePath.Text;
+                    //System.IO.Compression.ZipFile.CreateFromDirectory(ArchivePath.Text, DestinationPath.Text);
+                    //System.Windows.MessageBox.Show("Archive Created!");
+                    ZipFileasync(inputDirectory, DestinationArchievePathString);
+
+
+
                 }
                 else
                 {
@@ -112,13 +118,23 @@ namespace archive_creator
 
                 throw;
             }
-            
-                
-            
-
-            
-
+           
         }
+
+        public async Task ZipFileasync(string inputFolder, string outputFile)
+        {
+
+            //System.IO.Compression.ZipFile.CreateFromDirectory(ArchivePath.Text, DestinationPath.Text);
+            await Task.Run( ()=> {
+                System.IO.Compression.ZipFile.CreateFromDirectory(inputFolder, outputFile);
+                System.Windows.MessageBox.Show("Archive Created!");
+
+            });
+
+           
+        }
+
+
     }
     
 }
