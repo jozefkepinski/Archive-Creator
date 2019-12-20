@@ -23,9 +23,6 @@ C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\MainWindow
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\App.g.cs
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator_MarkupCompile.cache
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator_MarkupCompile.lref
-C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\Add To Archive.baml
-C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\MainWindow.baml
-C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.g.resources
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive_creator.Properties.Resources.resources
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.csproj.GenerateResource.cache
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.exe
@@ -34,3 +31,6 @@ C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\bin\Debug\DotNetZip.
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\bin\Debug\DotNetZip.pdb
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\bin\Debug\DotNetZip.xml
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.csproj.CopyComplete
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\Add To Archive.baml
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\MainWindow.baml
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.g.resources
