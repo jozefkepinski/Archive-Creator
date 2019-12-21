@@ -78,14 +78,10 @@ namespace archive_creator
         {
             try
             {
-                if (!Ionic.Zip.ZipFile.IsZipFile(DestinationPath.Text))
+                if (!Ionic.Zip.ZipFile.IsZipFile(DestinationArchievePathString))
                 {
                     inputDirectory = ArchivePath.Text;
-                    //System.IO.Compression.ZipFile.CreateFromDirectory(ArchivePath.Text, DestinationPath.Text);
-                    //System.Windows.MessageBox.Show("Archive Created!");
                     ZipFileasync(inputDirectory, DestinationArchievePathString);
-
-
 
                 }
                 else
@@ -101,7 +97,7 @@ namespace archive_creator
                         case MessageBoxResult.Cancel:
                             break;
                         case MessageBoxResult.Yes:
-                            Ionic.Zip.ZipFile.FixZipDirectory(DestinationPath.Text);
+                            Ionic.Zip.ZipFile.FixZipDirectory(DestinationArchievePathString);
                             System.Windows.MessageBox.Show("File rewrited!");
                             break;
                         case MessageBoxResult.No:
@@ -123,15 +119,12 @@ namespace archive_creator
 
         public async Task ZipFileasync(string inputFolder, string outputFile)
         {
-
-            //System.IO.Compression.ZipFile.CreateFromDirectory(ArchivePath.Text, DestinationPath.Text);
             await Task.Run( ()=> {
                 System.IO.Compression.ZipFile.CreateFromDirectory(inputFolder, outputFile);
                 System.Windows.MessageBox.Show("Archive Created!");
 
             });
-
-           
+    
         }
 
 
