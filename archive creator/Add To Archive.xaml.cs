@@ -160,12 +160,15 @@ namespace archive_creator
             switch (compLevel)
             {
                 case "Optimal":
-                    return compressionLevel = CompressionLevel.Optimal;
+                    compressionLevel = CompressionLevel.Optimal;
+                    break;
 
                 case "Fastest":
-                    return compressionLevel = CompressionLevel.Fastest;
+                    compressionLevel = CompressionLevel.Fastest;
+                    break;
                 case "NoCompression":
-                    return compressionLevel = CompressionLevel.NoCompression;
+                    compressionLevel = CompressionLevel.NoCompression;
+                    break;
 
             }
             return compressionLevel;
