@@ -27,29 +27,43 @@ namespace archive_creator
     
     public partial class Add_To_Archive : Window
     {
-        public string ArchievePathString;
-        public string DestinationArchievePathString;
+        public string archievePathString;
+        public string destinationArchievePathString;
         FileInfo fileInfo;
         public string inputDirectory;
+        public string compressionLevelString;
+        public CompressionLevel compressionLevel { get; set; }
+
+
+
+
         public Add_To_Archive()
         {
+
+            InitializeCbCompresiontype();
             InitializeComponent();
             
+
+
         }
 
 
         public Add_To_Archive(string archivePath, string destinatnionstring)
         {
             InitializeComponent();
-            ArchievePathString = archivePath;
-            DestinationArchievePathString = destinatnionstring;
+            InitializeCbCompresiontype();
+            archievePathString = archivePath;
+            destinationArchievePathString = destinatnionstring;
             Activated += Add_To_Archive_Activated;
+           
+
+
         }
 
         private void Add_To_Archive_Activated(object sender, EventArgs e)
         {
-            ArchivePath.Text = ArchievePathString;
-            DestinationPath.Text = DestinationArchievePathString;
+            ArchivePath.Text = archievePathString;
+            DestinationPath.Text = destinationArchievePathString;
             
         }
 
@@ -71,17 +85,19 @@ namespace archive_creator
             string fileName = fileInfo.Name;
           
             DestinationPath.Text = FileDirFolderBrowser.SelectedPath +"\\"+ fileName + ".zip";
-            DestinationArchievePathString = DestinationPath.Text;
+            destinationArchievePathString = DestinationPath.Text;
         }
 
         private void Create_Archive_Click(object sender, RoutedEventArgs e)
         {
+            compressionLevelString = CbCompresiontype.Text;
+            CompressionLevelFunc(compressionLevelString);
             try
             {
-                if (!Ionic.Zip.ZipFile.IsZipFile(DestinationArchievePathString))
+                if (!Ionic.Zip.ZipFile.IsZipFile(destinationArchievePathString))
                 {
                     inputDirectory = ArchivePath.Text;
-                    ZipFileasync(inputDirectory, DestinationArchievePathString);
+                    ZipFileasync(inputDirectory, destinationArchievePathString,compressionLevel);
 
                 }
                 else
@@ -97,7 +113,7 @@ namespace archive_creator
                         case MessageBoxResult.Cancel:
                             break;
                         case MessageBoxResult.Yes:
-                            Ionic.Zip.ZipFile.FixZipDirectory(DestinationArchievePathString);
+                            Ionic.Zip.ZipFile.FixZipDirectory(destinationArchievePathString);
                             System.Windows.MessageBox.Show("File rewrited!");
                             break;
                         case MessageBoxResult.No:
@@ -117,10 +133,10 @@ namespace archive_creator
            
         }
 
-        public async Task ZipFileasync(string inputFolder, string outputFile)
+        public async Task ZipFileasync(string inputFolder, string outputFile, CompressionLevel compressionLevel)
         {
             await Task.Run( ()=> {
-                System.IO.Compression.ZipFile.CreateFromDirectory(inputFolder, outputFile);
+                System.IO.Compression.ZipFile.CreateFromDirectory(inputFolder, outputFile,compressionLevel,true);
                 System.Windows.MessageBox.Show("Archive Created!");
 
             });
@@ -128,6 +144,38 @@ namespace archive_creator
         }
 
 
+        private void InitializeCbCompresiontype()
+        {
+            string[] compressionLevel = new string[] { "Optimal", "Fastest", "NoCompression" };
+            foreach (var item in compressionLevel)
+            {
+                CbCompresiontype.Items.Add(item);
+            }
+            
+        }
+
+
+        public CompressionLevel CompressionLevelFunc(string compLevel)
+        {
+            switch (compLevel)
+            {
+                case "Optimal":
+                    return compressionLevel = CompressionLevel.Optimal;
+
+                case "Fastest":
+                    return compressionLevel = CompressionLevel.Fastest;
+                case "NoCompression":
+                    return compressionLevel = CompressionLevel.NoCompression;
+
+            }
+            return compressionLevel;
+        }
+
+        private void CbCompresiontype_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CbCompresiontype.Items.Refresh();
+            compressionLevelString = CbCompresiontype.Text;
+        }
     }
     
 }

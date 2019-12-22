@@ -14,6 +14,8 @@
         <Button x:Name="SearchDirSourcePath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,23,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirSourcePath_Click"/>
         <Button x:Name="SearchDirDestinationPath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,65,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirDestinationPath_Click"/>
         <Button x:Name="Create_Archive" Content="Create_Archive" HorizontalAlignment="Left" Height="50" Margin="586,286,0,0" VerticalAlignment="Top" Width="178" Click="Create_Archive_Click"/>
+        <ComboBox x:Name="CbCompresiontype" HorizontalAlignment="Left" Height="22" Margin="107,135,0,0" VerticalAlignment="Top" Width="119" SelectedIndex="0" SelectionChanged="CbCompresiontype_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="17,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Text="Compres"/><Run Text="s"/><Run Text="ion type:"/></TextBlock>
 
     </Grid>
 </Window>
