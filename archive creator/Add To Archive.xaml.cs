@@ -90,6 +90,7 @@ namespace archive_creator
 
         private void Create_Archive_Click(object sender, RoutedEventArgs e)
         {
+            destinationArchievePathString = DestinationPath.Text;
             compressionLevelString = CbCompresiontype.Text;
             CompressionLevelFunc(compressionLevelString);
             try
