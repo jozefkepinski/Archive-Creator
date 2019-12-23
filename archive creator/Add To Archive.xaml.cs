@@ -28,7 +28,7 @@ namespace archive_creator
     public partial class Add_To_Archive : Window
     {
         public string archievePathString;
-        public string destinationArchievePathString;
+        public string destinationArchievePathString; //TODO change global used variables to Fields
         FileInfo fileInfo;
         public string inputDirectory;
         public string compressionLevelString;

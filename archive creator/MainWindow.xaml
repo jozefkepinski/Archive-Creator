@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Create Archive from directory" HorizontalAlignment="Left" VerticalAlignment="Top" Width="296" Margin="31,36,0,0" Height="80" Click="Button_Click"/>
+        <Button x:Name="Create_Archive" Content="Create Archive from directory" HorizontalAlignment="Left" VerticalAlignment="Top" Width="296" Margin="31,36,0,0" Height="80" Click="CreateArchiveButton_Click"/>
+        <Button x:Name="Extract_Archive" Content="Extract Archive" HorizontalAlignment="Left" Height="80" Margin="413,36,0,0" VerticalAlignment="Top" Width="296" Click="ExtractArchiveButton_Click"/>
 
     </Grid>
 </Window>

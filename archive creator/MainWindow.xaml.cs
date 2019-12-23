@@ -37,7 +37,7 @@ namespace archive_creator
        
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CreateArchiveButton_Click(object sender, RoutedEventArgs e)
         {
             
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
@@ -54,12 +54,13 @@ namespace archive_creator
                 Add_To_Archive add_To_Archive = new Add_To_Archive(selectedPath,filePath);
                 add_To_Archive.ShowDialog();
 
-                
-
             }
 
         }
 
-      
+        private void ExtractArchiveButton_Click(object sender, RoutedEventArgs e) //TODO add anchor to Extract class
+        {
+
+        }
     }
 }
