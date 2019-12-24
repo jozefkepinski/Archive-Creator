@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Extract_Archive" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="Zip_file" HorizontalAlignment="Left" Height="31" Margin="119,31,0,0" TextWrapping="Wrap" Text="Zip_file" VerticalAlignment="Top" Width="515"/>
+        <TextBox x:Name="Extract_directory" HorizontalAlignment="Left" Height="31" Margin="119,90,0,0" TextWrapping="Wrap" Text="Extract directory" VerticalAlignment="Top" Width="515"/>
+        <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" TextWrapping="Wrap" Text="Selected ZIP file:" VerticalAlignment="Top" Width="78"/>
+        <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"><Run Text="Extraction directory:"/><LineBreak/><Run/></TextBlock>
+
     </Grid>
 </Window>

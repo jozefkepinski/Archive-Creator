@@ -24,12 +24,13 @@ namespace archive_creator
 
         private delegate void ZipFileDelegate(string inputPath, string destinationPath);
 
-        public string selectedPath;
-        public string savedFile;
-        public string filePath;
+        //public string selectedPath;
+        //public string savedFile;
+        
+        private string selectedPath { get; set; }
+        public string filePath { get; set; }
 
 
-      
         public MainWindow()
         {
      
@@ -40,6 +41,7 @@ namespace archive_creator
         private void CreateArchiveButton_Click(object sender, RoutedEventArgs e)
         {
             
+
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
             folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
@@ -60,7 +62,21 @@ namespace archive_creator
 
         private void ExtractArchiveButton_Click(object sender, RoutedEventArgs e) //TODO add anchor to Extract class
         {
+            OpenFileDialog fileBrowserDialog = new OpenFileDialog();
 
+            fileBrowserDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            fileBrowserDialog.ShowDialog();
+
+            selectedPath = fileBrowserDialog.FileName;
+
+            if (selectedPath != String.Empty)
+            {
+                filePath = selectedPath.Substring(0,selectedPath.Length-4);
+                Extract_Archive extract_Archive = new Extract_Archive(selectedPath, filePath);
+                extract_Archive.ShowDialog();
+
+            }
         }
     }
 }

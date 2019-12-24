@@ -19,9 +19,32 @@ namespace archive_creator
     /// </summary>
     public partial class Extract_Archive : Window //TODO Finish this class
     {
+
+        private string inputFile { get; set; }
+        private string outputDirectory { get; set; }
+
+
         public Extract_Archive()
         {
             InitializeComponent();
+        }
+
+
+        public Extract_Archive(string zipInputDirectory, string zipOutputDirectory)
+        {
+            InitializeComponent();
+
+           inputFile = zipInputDirectory;
+           outputDirectory = zipOutputDirectory;
+
+            Activated += Extract_Archive_Activated;
+
+        }
+
+        private void Extract_Archive_Activated(object sender, EventArgs e)
+        {
+            Zip_file.Text = inputFile;
+            Extract_directory.Text = outputDirectory;
         }
     }
 }
