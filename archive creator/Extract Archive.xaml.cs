@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,44 @@ namespace archive_creator
         {
             Zip_file.Text = inputFile;
             Extract_directory.Text = outputDirectory;
+        }
+
+        private void ExtractArchiveButton_Click(object sender, RoutedEventArgs e)
+        {
+            inputFile = Zip_file.Text;
+            outputDirectory = Extract_directory.Text;
+
+            try
+            {
+
+                var directory = new DirectoryInfo(outputDirectory);
+
+                if (!directory.Exists)
+                {
+                    directory.Create();
+                    ZipFileasync(inputFile, outputDirectory);
+                }
+
+                else
+                {
+                    ZipFileasync(inputFile, outputDirectory);
+                    MessageBox.Show("File Extracted!");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public async Task ZipFileasync(string inputFolder, string outputFile)
+        {
+            await Task.Run(() => {
+                System.IO.Compression.ZipFile.ExtractToDirectory(inputFolder, outputFile);
+                System.Windows.MessageBox.Show("Archive Extracted!");
+
+            });
+
         }
     }
 }
