@@ -35,4 +35,3 @@ C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\MainWindow
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.g.resources
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\Extract Archive.g.cs
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\Extract Archive.baml
-C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.csprojAssemblyReference.cache
