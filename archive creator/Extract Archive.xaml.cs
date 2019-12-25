@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -18,7 +19,7 @@ namespace archive_creator
     /// <summary>
     /// Interaction logic for Extract_Archive.xaml
     /// </summary>
-    public partial class Extract_Archive : Window //TODO Finish this class
+    public partial class Extract_Archive : Window
     {
 
         private string inputFile { get; set; }
@@ -67,7 +68,7 @@ namespace archive_creator
                 else
                 {
                     ZipFileasync(inputFile, outputDirectory);
-                    MessageBox.Show("File Extracted!");
+                    System.Windows.MessageBox.Show("File Extracted!");
                 }
             }
             catch (Exception)
@@ -76,14 +77,36 @@ namespace archive_creator
                 throw;
             }
         }
-        public async Task ZipFileasync(string inputFolder, string outputFile)
+        public async Task ZipFileasync(string inputFileName, string outputDirectory)//TODO if file exists try overwrite
         {
             await Task.Run(() => {
-                System.IO.Compression.ZipFile.ExtractToDirectory(inputFolder, outputFile);
+                System.IO.Compression.ZipFile.ExtractToDirectory(inputFileName, outputDirectory);
                 System.Windows.MessageBox.Show("Archive Extracted!");
 
             });
 
+        }
+
+        private void ZipFileSearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileBrowserDialog = new OpenFileDialog();
+
+            fileBrowserDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            fileBrowserDialog.ShowDialog();
+
+            Zip_file.Text =  fileBrowserDialog.FileName;
+        }
+
+        private void ExtractDirectorySearch_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
+
+            folderBrowserDialog.ShowDialog();
+
+            Extract_directory.Text = folderBrowserDialog.SelectedPath;
         }
     }
 }

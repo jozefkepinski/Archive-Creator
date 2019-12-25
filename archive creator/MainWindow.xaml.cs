@@ -60,7 +60,7 @@ namespace archive_creator
 
         }
 
-        private void ExtractArchiveButton_Click(object sender, RoutedEventArgs e) //TODO add anchor to Extract class
+        private void ExtractArchiveButton_Click(object sender, RoutedEventArgs e) 
         {
             OpenFileDialog fileBrowserDialog = new OpenFileDialog();
 
