@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-
+using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Threading;
 
@@ -35,8 +35,38 @@ namespace archive_creator
         {
      
             InitializeComponent();
+            CustomizeDesign();
        
         }
+
+        private void CustomizeDesign()
+        {
+            archiveOptionsSubenu.Visibility = Visibility.Collapsed;
+            aboutSubenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void HideSubmenu()
+        {
+            if (archiveOptionsSubenu.IsVisible==true)
+            {
+                archiveOptionsSubenu.Visibility = Visibility.Collapsed;
+            }
+            if (aboutSubenu.IsVisible == true)
+            {
+                aboutSubenu.Visibility = Visibility.Collapsed;
+            }
+        }
+
+
+        private void ShowSubMenu(DockPanel submenu)
+        {
+            if (submenu.IsVisible==false)
+            {
+                HideSubmenu();
+                submenu.Visibility = Visibility.Visible;
+            }
+        }
+
 
         private void CreateArchiveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -77,6 +107,16 @@ namespace archive_creator
                 extract_Archive.ShowDialog();
 
             }
+        }
+
+        private void btnArchive_Click(object sender, RoutedEventArgs e)
+        {
+            ShowSubMenu(archiveOptionsSubenu);
+        }
+
+        private void about_Click(object sender, RoutedEventArgs e)
+        {
+            ShowSubMenu(aboutSubenu);
         }
     }
 }
