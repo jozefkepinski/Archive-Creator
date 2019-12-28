@@ -1,19 +1,19 @@
-﻿<Window x:Class="archive_creator.Extract_Archive"
+﻿<Window x:Name="Extract_to_archiveForm" x:Class="archive_creator.Extract_Archive"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:archive_creator"
         mc:Ignorable="d"
-        Title="Extract_Archive" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="Zip_file" HorizontalAlignment="Left" Height="31" Margin="119,31,0,0" TextWrapping="Wrap" Text="Zip_file" VerticalAlignment="Top" Width="515"/>
-        <TextBox x:Name="Extract_directory" HorizontalAlignment="Left" Height="31" Margin="119,90,0,0" TextWrapping="Wrap" Text="Extract directory" VerticalAlignment="Top" Width="515"/>
+        Title="Extract_Archive" Height="578" Width="613">
+    <Grid Width="613" Height="578">
+        <TextBox x:Name="Zip_file" HorizontalAlignment="Left" Height="31" Margin="119,31,0,0" TextWrapping="Wrap" Text="Zip_file" VerticalAlignment="Top" Width="323"/>
+        <TextBox x:Name="Extract_directory" HorizontalAlignment="Left" Height="31" Margin="119,90,0,0" TextWrapping="Wrap" Text="Extract directory" VerticalAlignment="Top" Width="323"/>
         <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" TextWrapping="Wrap" Text="Selected ZIP file:" VerticalAlignment="Top" Width="78"/>
         <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"><Run Text="Extraction directory:"/><LineBreak/><Run/></TextBlock>
-        <Button x:Name="ExtractArchiveButton" Content="ExtractArchive" HorizontalAlignment="Left" Height="45" Margin="604,323,0,0" VerticalAlignment="Top" Width="163" Click="ExtractArchiveButton_Click"/>
-        <Button x:Name="ZipFileSearchButton" Content=". . ." HorizontalAlignment="Left" Height="31" Margin="683,31,0,0" VerticalAlignment="Top" Width="49" Click="ZipFileSearchButton_Click"/>
-        <Button x:Name="ExtractDirectorySearch_Button" Content=". . ." HorizontalAlignment="Left" Height="31" Margin="683,90,0,0" VerticalAlignment="Top" Width="49" Click="ExtractDirectorySearch_ButtonClick"/>
+        <Button x:Name="ExtractArchiveButton" Content="ExtractArchive" HorizontalAlignment="Left" Height="45" Margin="279,322,0,0" VerticalAlignment="Top" Width="163" Click="ExtractArchiveButton_Click"/>
+        <Button x:Name="ZipFileSearchButton" Content=". . ." HorizontalAlignment="Left" Height="31" Margin="521,31,0,0" VerticalAlignment="Top" Width="49" Click="ZipFileSearchButton_Click"/>
+        <Button x:Name="ExtractDirectorySearch_Button" Content=". . ." HorizontalAlignment="Left" Height="31" Margin="521,90,0,0" VerticalAlignment="Top" Width="49" Click="ExtractDirectorySearch_ButtonClick"/>
 
     </Grid>
 </Window>

@@ -1,19 +1,19 @@
-﻿<Window x:Class="archive_creator.Add_To_Archive"
+﻿<Window x:Name="ArchiveForm" x:Class="archive_creator.Add_To_Archive"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:archive_creator"
         mc:Ignorable="d"
-        Title="Add_To_Archive" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="ArchivePath" HorizontalAlignment="Left" Height="25" Margin="97,23,0,0" TextWrapping="Wrap" Text="Source Path" VerticalAlignment="Top" Width="576"/>
+        Title="Add_To_Archive" Height="578" Width="613">
+    <Grid Width="613" Height="578">
+        <TextBox x:Name="ArchivePath" HorizontalAlignment="Left" Height="25" Margin="97,23,0,0" TextWrapping="Wrap" Text="Source Path" VerticalAlignment="Top" Width="263"/>
         <TextBlock HorizontalAlignment="Left" Height="25" Margin="17,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Text="Source "/><Run Text="Path:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="35" Margin="17,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Text="Destination"/><LineBreak/><Run/><Run Text=" "/><Run Text="Path:"/></TextBlock>
-        <TextBox x:Name="DestinationPath" HorizontalAlignment="Left" Height="25" Margin="97,65,0,0" TextWrapping="Wrap" Text="Destination Path" VerticalAlignment="Top" Width="576"/>
-        <Button x:Name="SearchDirSourcePath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,23,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirSourcePath_Click"/>
-        <Button x:Name="SearchDirDestinationPath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="707,65,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirDestinationPath_Click"/>
-        <Button x:Name="Create_Archive" Content="Create_Archive" HorizontalAlignment="Left" Height="50" Margin="586,286,0,0" VerticalAlignment="Top" Width="178" Click="Create_Archive_Click"/>
+        <TextBox x:Name="DestinationPath" HorizontalAlignment="Left" Height="25" Margin="97,65,0,0" TextWrapping="Wrap" Text="Destination Path" VerticalAlignment="Top" Width="263"/>
+        <Button x:Name="SearchDirSourcePath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="502,23,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirSourcePath_Click"/>
+        <Button x:Name="SearchDirDestinationPath" Content=". . ." HorizontalAlignment="Left" Height="25" Margin="502,65,0,0" VerticalAlignment="Top" Width="57" Click="SearchDirDestinationPath_Click"/>
+        <Button x:Name="Create_Archive" Content="Create_Archive" HorizontalAlignment="Left" Height="50" Margin="97,261,0,0" VerticalAlignment="Top" Width="178" Click="Create_Archive_Click"/>
         <ComboBox x:Name="CbCompresiontype" HorizontalAlignment="Left" Height="22" Margin="107,135,0,0" VerticalAlignment="Top" Width="119" SelectedIndex="0" SelectionChanged="CbCompresiontype_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Height="35" Margin="17,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"><Run Text="Compres"/><Run Text="s"/><Run Text="ion type:"/></TextBlock>
 

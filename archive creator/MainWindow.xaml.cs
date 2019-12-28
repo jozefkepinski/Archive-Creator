@@ -65,13 +65,35 @@ namespace archive_creator
                 HideSubmenu();
                 submenu.Visibility = Visibility.Visible;
             }
+            else
+            {
+                submenu.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm!=null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.DataContext = childForm;
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
 
         private void CreateArchiveButton_Click(object sender, RoutedEventArgs e)
         {
-            
 
+           
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
             folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
@@ -83,11 +105,13 @@ namespace archive_creator
             if (selectedPath != String.Empty)
             {
                 filePath = selectedPath + ".zip";
-                Add_To_Archive add_To_Archive = new Add_To_Archive(selectedPath,filePath);
-                add_To_Archive.ShowDialog();
+                //Add_To_Archive add_To_Archive = new Add_To_Archive(selectedPath,filePath);
+                //add_To_Archive.ShowDialog();
+                //OpenChildForm(new Add_To_Archive(selectedPath,filePath));
+                
 
             }
-
+            HideSubmenu();
         }
 
         private void ExtractArchiveButton_Click(object sender, RoutedEventArgs e) 
@@ -107,6 +131,7 @@ namespace archive_creator
                 extract_Archive.ShowDialog();
 
             }
+            HideSubmenu();
         }
 
         private void btnArchive_Click(object sender, RoutedEventArgs e)
