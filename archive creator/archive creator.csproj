@@ -85,6 +85,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ArchiveAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveAdd.Designer.cs">
+      <DependentUpon>ArchiveAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExctractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExctractForm.Designer.cs">
+      <DependentUpon>ExctractForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extract Archive.xaml.cs">
       <DependentUpon>Extract Archive.xaml</DependentUpon>
     </Compile>
@@ -107,6 +119,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="ArchiveAdd.resx">
+      <DependentUpon>ArchiveAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExctractForm.resx">
+      <DependentUpon>ExctractForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

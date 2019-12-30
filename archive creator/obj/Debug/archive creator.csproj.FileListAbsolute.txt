@@ -36,3 +36,6 @@ C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive cr
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\Extract Archive.g.cs
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\Extract Archive.baml
 C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive creator.csprojAssemblyReference.cache
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive_creator.ArchiveAdd.resources
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\archive_creator.ExctractForm.resources
+C:\Users\jozef\Source\Repos\Archive-Creator\archive creator\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -21,7 +21,8 @@
 
             </DockPanel>
         </DockPanel>
-        <DockPanel x:Name="panelChildForm" HorizontalAlignment="Left" Margin="250,0,-0.333,0" Width="613" Background="#FF171520" LastChildFill="False"/>
+        <GroupBox x:Name="panelChildForm" Header="" Margin="250,-10,-0.333,0" Background="#FF2C2A2A" BorderThickness="0" Height="588" VerticalAlignment="Bottom"/>
+
 
 
 

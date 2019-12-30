@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using System.Windows.Threading;
 
 namespace archive_creator
 {
@@ -78,39 +70,42 @@ namespace archive_creator
             {
                 activeForm.Close();
             }
-
+       
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.DataContext = childForm;
+            //panelChildForm.DataContext = childForm; //TODO Check
+            //panelChildForm
             panelChildForm.Tag = childForm;
+            
             childForm.BringToFront();
+            panelChildForm.BringIntoView();
             childForm.Show();
         }
 
 
         private void CreateArchiveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            OpenChildForm(new ArchiveAdd());
            
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            //FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
-            folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
+            //folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;
 
-            folderBrowserDialog.ShowDialog();
+            //folderBrowserDialog.ShowDialog();
 
-            selectedPath = folderBrowserDialog.SelectedPath;
+            //selectedPath = folderBrowserDialog.SelectedPath;
 
-            if (selectedPath != String.Empty)
-            {
-                filePath = selectedPath + ".zip";
-                //Add_To_Archive add_To_Archive = new Add_To_Archive(selectedPath,filePath);
-                //add_To_Archive.ShowDialog();
-                //OpenChildForm(new Add_To_Archive(selectedPath,filePath));
+            //if (selectedPath != String.Empty)
+            //{
+            //    filePath = selectedPath + ".zip";
+            //    //Add_To_Archive add_To_Archive = new Add_To_Archive(selectedPath,filePath);
+            //    //add_To_Archive.ShowDialog();
+            //    //OpenChildForm(new Add_To_Archive(selectedPath,filePath));
                 
 
-            }
+            //}
             HideSubmenu();
         }
 
